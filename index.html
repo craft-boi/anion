@@ -4126,7 +4126,7 @@ const UI = (() => {
       for (const x of favs) { await Library.removeTrack(x.id); await Playlist.removeTrackFromAll(x.id); }
       const pl = Playlist.getAll().find(p => p.name === 'Dev Fav');
       if (pl) await Playlist.remove(pl.id);
-      showToast(favs.length ? `Removed ${favs.length} Dev Fav tracks` : 'Dev Fav off');
+      showToast(favs.length ? `Removed ${favs.length} tracks` : 'off');
       renderLibrary();
     }
   }
