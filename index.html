@@ -4601,8 +4601,8 @@ const UI = (() => {
       await listServerAudio(base.href, 3, ctx);
     } catch (e) {
       showToast(e.message === 'SELF'
-        ? 'Server returned this page instead of a folder listing. Rename it from index.html to player.html'
-        : 'Welcome');
+        ? ''
+        : '');
       return;
     }
     if (!ctx.audio.length) { showToast('No audio files found in this folder'); return; }
